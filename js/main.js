@@ -848,6 +848,7 @@ $(document).ready(function(){
                 view.extent = southExtent;
             }
             queryExpand.iconNumber = 1;
+            poi.visible = true;
             queryExpand.collapse();
         });
         
