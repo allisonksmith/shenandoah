@@ -1,0 +1,253 @@
+html,
+body,
+#viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body, html{
+    overflow:hidden;
+}
+
+h6{
+  font-family: 'Roboto', sans-serif;  
+  font-size: 10px;
+  text-decoration: underline;
+}
+
+
+
+.esri-layer-list{
+    max-height: 80vh;
+    overflow: auto;
+}
+
+
+.editArea-container {
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5em;
+  overflow: auto;
+  padding: 12px 15px;
+  width: 300px;
+  max-width: 300px;
+  max-height: 80vh;
+  /*position: fixed;
+  top: 15px;*/
+}
+
+#viewDiv > div.esri-view-root > div.esri-ui > div.esri-ui-inner-container.esri-ui-corner-container > div.esri-ui-top-right.esri-ui-corner > div > div.esri-expand__container > div.esri-expand__panel > div{
+    padding: 20px;
+}
+
+.edit-button:hover,
+.edit-button:focus{
+  background-color: #e4e4e4;
+}
+
+.edit-button:disabled{
+    border: 2px solid red;
+    color: darkgray;
+    background-color: lightgrey;
+    cursor: not-allowed;
+}
+
+.inputInfo {
+    font-size: 12px;
+    height: 32px;
+    margin-bottom: 6px;
+    padding: 0 6px;
+    width: 100%;
+}
+#vrNotes {
+    font-size: 12px;
+    height: 128px;
+}
+textarea{
+    padding: 20px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.inputInfo::placeholder{
+    color: #9C9C9C;
+}
+
+#info-div{
+    width:300px;
+    max-height: 80vh;
+    color: #323232;
+    background-color: #f5f5f5;
+    padding: 6px 7px;
+    font-size: 14px;
+    background: #fff;
+    overflow:auto;
+    /*position: fixed;
+    top: 15px;*/
+}
+#filter{
+    font-size: 12px;
+    color: #9C9C9C;
+    height: 32px;
+    padding:0 6px;
+    margin-bottom: 10px;
+    width:100%;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.dropDown {
+    font-size: 12px;
+    color: #9C9C9C;
+    height: 32px;
+    padding:0 6px;
+    margin-bottom: 10px;
+    width:100%;
+    display: inline-block;
+    cursor:pointer;
+}
+option:not(:nth-child(1)){
+    color:black;
+}
+
+#VAEnterpriseZone,
+#ForeignTradeZone{
+    width: 80%;
+    float:right;
+}
+
+.date {
+    font-size: 12px;
+    height: 32px;
+    padding:0 6px;
+    margin-bottom: 10px;
+    color: #323232;
+    width:100%;
+}
+
+.list-heading {
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #323232;
+}
+
+.edit-button,
+.edit-button:enabled{
+  font-size: 14px;
+  height: 32px;
+  margin-top: 10px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #0079c1;
+  color: #0079c1;
+  cursor:pointer;
+}
+
+
+input:invalid {
+  border: 2px solid red;
+  color: red;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+textarea:valid {
+  border: 1px solid green;
+}
+
+textarea:invalid {
+  border: 2px solid red;
+  color: red;
+}
+
+#incLabel{
+    width:80%;
+    float:left;
+}
+
+
+.zoneCheck{
+    background:none!important;
+    border:none;
+    padding:0;
+    text-align: left;
+    cursor: pointer;
+    width:20%;
+    float:left;
+}
+
+#ezClickText{   
+    color: rgba(104, 82, 127, 0.5);
+    padding:0;
+    text-align: center
+}
+
+#tzClickText{
+    color: rgba(70, 120, 127, 0.5); 
+    padding:0;
+    text-align: center
+}
+
+/* LAYER LIST LEGEND */
+#ezLegend{
+    color: rgba(104, 82, 127, 0.5);
+    padding-left: 30px;
+}
+
+#tzLegend{
+    color: rgba(70, 120, 127, 0.5);
+    padding-left: 30px;
+}
+.esri-layer-list__item-container{
+    padding-bottom: 5px;
+}
+
+.esri-layer-list__item-actions-menu{
+    visibility: hidden;
+}
+
+.esri-icon-collapse:before {
+    color: #0079c1;
+}
+
+
+/* PUSH BACK LAYER TOGGLE */
+.esri-ui-bottom-left{
+    z-index: 0;
+}
+
+
+/* SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f5f5f5; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ddd; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc; 
+}
+
+
+
+
+
+

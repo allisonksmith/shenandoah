@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+        <title>Shenandoah National Park Visitor Guide</title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://js.arcgis.com/4.7/esri/css/main.css">
+        <link rel="stylesheet" href= "css/style.css">
+
+    </head>
+
+    <body>
+
+        <div id="info-div">
+            <h3 class="list-heading">Filter Points of Interest</h3>
+            <legend><b>Show me:</b></legend>
+            <div id="assetCheck">
+                
+                <input type="checkbox" id = "Car Overlook" name ="feature" class= "chk" value="Car Overlook" />
+                <label for="Car Overlook">Car Overlook</label><br>
+                
+                <input type="checkbox" id = "Hiking Viewpoint" name ="feature" class= "chk" value="Hiking Viewpoint"  />
+                <label for="Hiking Viewpoint">Hiking Viewpoint</label><br>
+                
+                <input type="checkbox" id = "Waterfall" name ="feature" class= "chk" value="Waterfall"  />
+                <label for="Waterfall">Waterfall</label><br>
+                
+                
+                <input type="checkbox" id = "Parking Area" name ="feature" class= "chk" value="Parking Area"  />
+                <label for="Parking Area">Parking Area</label><br>
+                
+                <input type="checkbox" id = "Restroom" name ="feature" class= "chk" value="Restroom"  />
+                <label for="Restroom">Restroom</label><br>
+                
+                <input type="checkbox" id = "Food Or Store" name ="feature" class= "chk" value="Food Or Store"  />
+                <label for="Food Or Store">Food Or Store</label><br>
+                
+                <input type="checkbox" id = "Picnic Area" name ="feature" class= "chk" value="Picnic Area"  />
+                <label for="Picnic Area">Picnic Area</label><br>
+                
+                <input type="checkbox" id = "Visitor Info" name ="feature" class= "chk" value="Visitor Info"  />
+                <label for="Visitor Info">Visitor Info</label><br>
+                
+                <input type="checkbox" id = "Gas Station" name ="feature" class= "chk" value="Gas Station"  />
+                <label for="Gas Station">Gas Station</label><br>        
+                
+                <input type="checkbox" id = "Lodge or Cabins" name ="feature" class= "chk" value="Lodge or Cabins"  />
+                <label for="Lodge or Cabins">Lodge or Cabins</label><br>
+                
+                <input type="checkbox" id = "Campground" name ="feature" class= "chk" value="Campground"  />
+                <label for="Campground">Campground</label><br>
+                
+                <input type="checkbox" id = "Hiking Shelter" name ="feature" class= "chk" value="Hiking Shelter"  />
+                <label for="Hiking Shelter">Hiking Shelter</label><br>          
+                
+                <input type="checkbox" id = "Historical Site" name ="feature" class= "chk" value="Historical Site"  />
+                <label for="Historical Site">Historical Site</label><br>
+                
+                <input type="checkbox" id = "Cemetery" name ="feature" class= "chk" value="Cemetery"  />
+                <label for="Cemetery">Cemetery</label><br>
+                
+                
+            </div>
+            <br>
+            <legend><b>In the:</b></legend>
+            <select id="filter">
+                <option value="" selected>All Districts</option>
+                <option value="north" >North Distict</option>
+                <option value="central">Central District</option>
+                <option value="south">South District</option>
+            </select>
+            
+            <input type="button" class="edit-button" value="Filter" id="filterBtn">
+            <input type="button" class="edit-button" value="Clear Filter" id="clearFilterBtn">
+        </div>
+
+        <div id="editArea" class="editArea-container">
+            <div id="addFeatureDiv">
+                <h3 class="list-heading">Add a Recommended Location</h3>
+                <ul style="font-size: 13px; padding-left: 1.5em;">
+                    <li>Click Add Recommendation button</li>
+                    <li>Click on the map to create the location</li>
+                    <li>Enter infomration and click submit</li>
+                </ul>
+                <input type="button" class="edit-button" value="Add Recommendation" id="btnAddFeature">
+            </div>
+
+            <div id="featureUpdateDiv" style="display:none; margin-top: 1em;">
+                <h3 class="list-heading">Enter Recommendation</h3>
+
+                <div id="attributeArea">
+                        <p>
+                            <label for="placeName">Name of Location</label>
+                            <input class="inputInfo" type="text" id="placeName" maxlength="50" placeHolder="Enter Name of Location"><br>
+                            
+                            <label for="vrNotes">Recommendation</label>
+                            <textarea class="inputInfo"  wrap="hard" id="vrNotes" maxlength="500" placeHolder="Tell us why you loved it!"></textarea><br>
+
+                        </p>
+                    
+                    <input type="button" class="edit-button" value="Submit" id="btnUpdate">
+                </div>
+
+                <div id="warningText">
+                    NOTE: After submitting you will not be able to view the recommendation until it is approved by the administrator. 
+                </div>
+            </div>
+        </div>
+        <div id="viewDiv"></div>
+        <div id ="ezLegend"><i class="fas fa-square-full fa-2x"></i></div>
+        <div id ="tzLegend"><i class="fas fa-square-full fa-2x"></i></div>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+        <script src="https://js.arcgis.com/4.7/"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
