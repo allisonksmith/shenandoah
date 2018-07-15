@@ -489,7 +489,7 @@ $(document).ready(function(){
             visible: true,
             renderer: poiR,
             //opacity: 0.4,
-            title: "Point of Interest",
+            title: "Point of Interest <img src='img/trailhead.jpg'>",
             popupTemplate: poiP
         });
         
@@ -498,7 +498,7 @@ $(document).ready(function(){
           watchUtils.whenFalseOnce(view, "updating", function(){
              var attribs = dojoQuery(".esri-attribution__sources")[0];
              console.info(attribs);
-             attribs.innerHTML += ", OpenStreetMap.org contributors";
+             attribs.innerHTML += ", OpenStreetMap.org contributors, Virginia DCR";
           });
         });
 
@@ -732,14 +732,34 @@ $(document).ready(function(){
                 listItemCreatedFunction: function(event){
                     var item = event.item;
                     
-                    if (item.title === "Incentive Zone Boundaries"){
+                    if (item.title === "Trail Heads"){
                         item.open = true;
-                        item.children.items["0"].panel = {
-                            content: document.getElementById("tzLegend"),
+                        item.panel = {
+                            content: document.getElementById("th"),
                             open: true
                         }
-                        item.children.items["1"].panel = {
-                            content: document.getElementById("ezLegend"),
+                    } else if (item.title === "Point of Interest"){
+                        item.open = true;
+                        item.panel = {
+                            content: document.getElementById("poi"),
+                            open: true
+                        }
+                    } else if (item.title === "Visitor Recommendations"){
+                        item.open = true;
+                        item.panel = {
+                            content: document.getElementById("rec"),
+                            open: true
+                        }
+                    } else if (item.title === "Roads"){
+                        item.open = true;
+                        item.panel = {
+                            content: document.getElementById("road"),
+                            open: true
+                        }
+                    } else if (item.title === "Trails"){
+                        item.open = true;
+                        item.panel = {
+                            content: document.getElementById("trail"),
                             open: true
                         }
                     }
