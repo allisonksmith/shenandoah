@@ -489,7 +489,7 @@ $(document).ready(function(){
             visible: true,
             renderer: poiR,
             //opacity: 0.4,
-            title: "Point of Interest <img src='img/trailhead.jpg'>",
+            title: "Point of Interest",
             popupTemplate: poiP
         });
         
