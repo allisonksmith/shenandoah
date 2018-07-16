@@ -566,10 +566,7 @@ $(document).ready(function(){
 
                 selectFeature(newIncidentId);
               }
-              // reinitalizes the filter if engaged
-              if (document.getElementById("filter").value != ''){
-                featureLayer.definitionExpression = "PropertyType = '" + document.getElementById("filter").value + "'";
-                }
+              
             })
             .catch(function(error) {
               console.log("===============================================");
