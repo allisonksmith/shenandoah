@@ -803,25 +803,55 @@ $(document).ready(function(){
                 view:view,
                 allPlaceholder: "Search for SNP Places",
                 locationEnabled: false,
-                resultSymbol: pointHighlight,
                 sources: [{
                     featureLayer: poi,
-                    resultGraphicEnabled: true,
+                    resultSymbol: {
+                        type: "simple-marker",
+                        color: [0, 0, 0, 0],
+                        size: "17px",
+                        style: "square",
+                        outline: {
+                            color: [0, 255, 255, 1],
+                            width: "2px"
+                        }
+                    },
                     outFields: ["*"],
                     popupTemplate: poiP
                 }, {
                     featureLayer:aoi,
-                    resultGraphicEnabled: true,
+                    resultSymbol: {
+                        type: "simple-marker",
+                        color: [0, 0, 0, 0],
+                        size: "17px",
+                        style: "square",
+                        outline: {
+                            color: [0, 255, 255, 1],
+                            width: "2px"
+                        }
+                    },
                     outFields: ["*"],
                     popupTemplate: aoiP
                 }, {
                     featureLayer: trailheads,
-                    resultGraphicEnabled: true,
+                    resultSymbol: {
+                        type: "simple-marker",
+                        color: [0, 0, 0, 0],
+                        size: "17px",
+                        style: "square",
+                        outline: {
+                            color: [0, 255, 255, 1],
+                            width: "2px"
+                        }
+                    },
                     outFields: ["*"],
                     popupTemplate: trailheadsP
                 }, {
                     featureLayer:trails,
-                    resultGraphicEnabled: true,
+                    resultSymbol: {
+                        type: "simple-line",
+                        color: [0, 255, 255, 1],
+                        width: "2px"
+                    },
                     outFields: ["*"],
                     popupTemplate: trailsP
                 }]
