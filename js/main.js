@@ -803,6 +803,7 @@ $(document).ready(function(){
                 view:view,
                 allPlaceholder: "Search for SNP Places",
                 locationEnabled: false,
+                resultGraphic: pointHighlight,
                 sources: [{
                     featureLayer: poi,
                     resultGraphicEnabled: false,
