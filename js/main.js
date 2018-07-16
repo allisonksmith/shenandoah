@@ -803,25 +803,28 @@ $(document).ready(function(){
                 view:view,
                 allPlaceholder: "Search for SNP Places",
                 locationEnabled: false,
-                resultGraphic: pointHighlight,
                 sources: [{
                     featureLayer: poi,
-                    resultGraphicEnabled: false,
+                    resultGraphicEnabled: true,
+                    resultGraphic: pointHighlight,
                     outFields: ["*"],
                     popupTemplate: poiP
                 }, {
                     featureLayer:aoi,
-                    resultGraphicEnabled: false,
+                    resultGraphicEnabled: true,
+                    resultGraphic: pointHighlight,
                     outFields: ["*"],
                     popupTemplate: aoiP
                 }, {
                     featureLayer: trailheads,
-                    resultGraphicEnabled: false,
+                    resultGraphicEnabled: true,
+                    resultGraphic: pointHighlight,
                     outFields: ["*"],
                     popupTemplate: trailheadsP
                 }, {
                     featureLayer:trails,
-                    resultGraphicEnabled: false,
+                    resultGraphicEnabled: true,
+                    resultGraphic: lineHighlight,
                     outFields: ["*"],
                     popupTemplate: trailsP
                 }]
